@@ -1,4 +1,4 @@
-# README
+# Solution.md (Duplicate info from README)
 
 This is a basic web app that utilizes the https://countapi.xyz/ API to keep track of the number of hits against Fearless's website.
 

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Last known count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% if @counters.count == 0 %>
+    <tr>
+      <td id='current-count'>Click "Get current count to get the current count"</td>
+    </tr>
+  <% else %>
+    <% @counters.each do |counter| %>
+      <tr>
+        <td id='current-count'><%= counter.last_known_count %></td>
+      </tr>
+    <% end %>
+  <% end %>
+    Counter targets https://api.countapi.xyz/hit/fearless.tech/1ccb732e-b55a-4404-ad3f-0f99c02fe44e
+  </tbody>
+</table>
+
+<br>
+
+<%= render 'form', counter: @counter %>
